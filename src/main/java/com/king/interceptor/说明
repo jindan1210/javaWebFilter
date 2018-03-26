@@ -1,0 +1,8 @@
+防止xss攻击
+在 dispatcher-servlet.xml中配置
+  <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean class="com.king.interceptor.HtmlEncodeInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
